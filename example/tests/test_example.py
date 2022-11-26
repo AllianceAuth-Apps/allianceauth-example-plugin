@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+
 class TestGeneral(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -7,4 +8,3 @@ class TestGeneral(TestCase):
 
     def test_tautology(self):
         self.assertEqual(True, True)
-
