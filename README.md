@@ -85,6 +85,10 @@ rm your-app-name/migrations/0001_initial.py
 rm -rf your-app-name/migrations/_pycache
 ```
 
+## Writing unit tests
+
+Write your unit tests in `your-app-name/tests/` and make sure that you use a "test_" prefix for files with your unit tests.
+
 ## Installing into your dev AA
 
 Once you have cloned or copied all files into place and finished renaming the app you are ready to install it to your dev AA instance.
