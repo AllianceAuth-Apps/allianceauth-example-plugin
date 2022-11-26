@@ -6,5 +6,5 @@ class TestGeneral(TestCase):
         super().setUpClass()
 
     def test_tautology(self):
-        self.assertEquals(True, True)
+        self.assertEqual(True, True)
 
