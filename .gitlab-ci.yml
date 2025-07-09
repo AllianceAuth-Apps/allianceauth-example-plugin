@@ -54,7 +54,7 @@ test-py310-dj52:
   extends: .tox_setup
   image: python:3.10-bookworm
   script:
-    - tox -e py310-django50
+    - tox -e py310-django52
 
 test-py311-dj52:
   extends: .tox_setup
