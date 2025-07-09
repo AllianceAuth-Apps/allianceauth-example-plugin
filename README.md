@@ -60,7 +60,7 @@ Location | Description
 `/example/templates/example/` | folder name
 `/pyproject.toml` | update module name for version import, update package name, update title, author, etc.
 `/example/apps.py` | app name
-`/example/__init__.py` | app name
+`/example/__init__.py` | app name and replace the top description by a description of your application
 `/example/auth_hooks.py` | menu hook config incl. icon and label of your app's menu item appearing in the sidebar
 `/example/models.py` | app name
 `/example/urls.py` | app name
@@ -75,7 +75,7 @@ Location | Description
 
 ## Clearing migrations
 
-Instead of renaming your app in the migrations its easier to just recreate them later in the process. For this to work you need to delete the old migration files in your migrations folder.
+Instead of renaming your app in the migrations it's easier to just recreate them later in the process. For this to work you need to delete the old migration files in your migrations folder.
 
 ```bash
 rm your-app-name/migrations/0001_initial.py
@@ -129,7 +129,7 @@ pip install tox
 Then you can run the test suite for a specific environment with:
 
 ```sh
-tox -e py311-django40
+tox -e py311-django42
 ```
 
 You can use this command to see all configured test environments:
@@ -148,7 +148,10 @@ You can run the linter manually with:
 tox -e pylint
 ```
 
-To enable the linter to run as part of your CI pipeline you must uncomment the respective lines in `.gitlab-ci.yml`.
+The linter is enabled by default with the `allow_failure` option set to `true`.
+This allows you to start developing the application without having your pipelines crashing.
+
+Once you reach a stable version you should consider removing the `allow_failure` parameter.
 
 ## Installing into production AA
 
@@ -170,7 +173,7 @@ And then install it directly from the package file
 pip install your-package-app.tar.gz
 ```
 
-Then add your app to `INSTALLED_APPS` in `settings/local.py`, run migrations and restart your allianceserver.
+Then add your app to `INSTALLED_APPS` in `settings/local.py`, run migrations and restart your alliance server.
 
 ## Contribute
 
