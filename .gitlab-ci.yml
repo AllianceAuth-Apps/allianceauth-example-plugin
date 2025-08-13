@@ -73,6 +73,10 @@ deploy-pypi:
   image: python:3.12-bookworm
   before_script:
     - pip install twine wheel build
+  id_tokens:
+    PYPI_ID_TOKEN:
+      # Use "testpypi" if uploading to TestPyPI
+      aud: pypi
   script:
     - python -m build
     - twine upload dist/*
