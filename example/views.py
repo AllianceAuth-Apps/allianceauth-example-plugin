@@ -8,5 +8,5 @@ from django.shortcuts import render
 @permission_required("example.basic_access")
 def index(request):
     """Render index view."""
-    context = {"text": "Hello, World!"}
+    context = {"text": "Hello, World!", "page_title": "Welcome"}
     return render(request, "example/index.html", context)

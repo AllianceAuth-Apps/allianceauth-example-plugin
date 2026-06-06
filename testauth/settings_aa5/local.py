@@ -17,7 +17,10 @@ SITE_NAME = "testauth"
 
 # This is your websites URL, set it accordingly
 # Make sure this URL is WITHOUT a trailing slash
-SITE_URL = "http://127.0.0.1:8000"
+SITE_URL = "https://www.example.com"
+
+# Django security
+CSRF_TRUSTED_ORIGINS = [SITE_URL]
 
 # Change this to enable/disable debug mode, which displays
 # useful error messages but can leak sensitive data.
@@ -44,10 +47,10 @@ DATABASES['default'] = {
 # to https://example.com/sso/callback substituting your domain for example.com
 # Logging in to auth requires the publicData scope (can be overridden through the
 # LOGIN_TOKEN_SCOPES setting). Other apps may require more (see their docs).
-ESI_USER_CONTACT_EMAIL = "email@mail.com"
 ESI_SSO_CLIENT_ID = "dummy"
 ESI_SSO_CLIENT_SECRET = "dummy"
 ESI_SSO_CALLBACK_URL = "http://localhost:8000"
+ESI_USER_CONTACT_EMAIL = "info@example.com"
 
 # By default emails are validated before new users can log in.
 # It's recommended to use a free service like SparkPost or Elastic Email to send email.
@@ -71,3 +74,9 @@ DEFAULT_FROM_EMAIL = ""
 # workarounds to suppress warnings
 LOGGING = None
 STATICFILES_DIRS = []
+ANALYTICS_DISABLED = True
+
+# Workaround for fixing the "Missing staticfiles manifest entry" bug in tests
+STORAGES["staticfiles"][
+    "BACKEND"
+] = "django.contrib.staticfiles.storage.StaticFilesStorage"

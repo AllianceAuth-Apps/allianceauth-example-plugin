@@ -7,10 +7,10 @@ This is an example plugin app for [Alliance Auth](https://gitlab.com/allianceaut
 
 ## Features
 
-- The plugin can be installed, upgraded (and removed) into an existing AA installation using PyInstaller.
-- It has it's own menu item in the sidebar.
-- It has one view that shows a panel and some text
-- Comes with CI pipeline pre-configured
+- Fully functional Alliance Auth app with a view and a basic permission
+- Tests
+- linters (pre-commit)
+- CI pipeline (tox & GitLab runner scripts)
 
 ## How to use it
 
@@ -171,7 +171,3 @@ pip install your-package-app.tar.gz
 ```
 
 Then add your app to `INSTALLED_APPS` in `settings/local.py`, run migrations and restart your allianceserver.
-
-## Contribute
-
-If you made a new app for AA please consider sharing it with the rest of the community. For any questions on how to share your app please contact the AA devs on their Discord. You find the current community creations [here](https://gitlab.com/allianceauth/community-creations).
