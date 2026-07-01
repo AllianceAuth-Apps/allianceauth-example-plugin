@@ -34,11 +34,7 @@ test = ["coverage", "factory_boy", "allianceauth-app-utils>=1.32"]
 
 
 [project.urls]
-Homepage = "https://gitlab.com/ErikKalkoken/allianceauth-example-plugin"
-Documentation = "https://allianceauth-example-plugin.readthedocs.io/en/latest/"
-Source = "https://gitlab.com/ErikKalkoken/allianceauth-example-plugin"
-Changelog = "https://gitlab.com/ErikKalkoken/allianceauth-example-plugin/-/blob/master/CHANGELOG.md"
-Tracker = "https://gitlab.com/ErikKalkoken/allianceauth-example-plugin/-/issues"
+Homepage = "https://github.com/YourName/example"
 
 [tool.flit.module]
 name = "example"
@@ -71,7 +67,6 @@ max-line-length = 120
 [tool.pylint.'MESSAGES CONTROL']
 disable = [
     "cyclic-import",
-    "fixme",
     "import-outside-toplevel",
     "imported-auth-user",
     "too-few-public-methods",
