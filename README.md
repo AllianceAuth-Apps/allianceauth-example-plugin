@@ -2,15 +2,17 @@
 
 This is an example plugin app for [Alliance Auth](https://gitlab.com/allianceauth/allianceauth) (AA) that can be used as starting point to develop custom plugins.
 
-![License](https://img.shields.io/badge/license-MIT-green)
-![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
+[![CI/CD Pipeline](https://github.com/AllianceAuth-Apps/allianceauth-example-plugin/actions/workflows/ci-cd.yaml/badge.svg)](https://github.com/AllianceAuth-Apps/allianceauth-example-plugin/actions/workflows/ci-cd.yaml)
+[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/AllianceAuth-Apps/allianceauth-example-plugin#MIT-1-ov-file)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![chat](https://img.shields.io/discord/790364535294132234)](https://discord.gg/zmh52wnfvM)
 
 ## Features
 
 - Fully functional Alliance Auth app with a view and a basic permission
 - Tests
 - linters (pre-commit)
-- CI pipeline (tox & GitLab runner scripts)
+- CI pipeline (tox & GitHub workflow with deploy)
 
 ## How to use it
 
